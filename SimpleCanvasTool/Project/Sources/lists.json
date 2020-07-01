@@ -1,0 +1,64 @@
+﻿{
+	"Drawing Tools": {
+		"lineHeight": 18,
+		"editable": false,
+		"items": [
+			{
+				"text": "Line",
+				"ref": 1,
+				"editable": true
+			},
+			{
+				"text": "Rectangle",
+				"ref": 2,
+				"editable": true
+			},
+			{
+				"text": "Pencil",
+				"ref": 3,
+				"editable": true
+			},
+			{
+				"text": "Circle",
+				"ref": 4,
+				"editable": true
+			}
+		]
+	},
+	"Stroke Size": {
+		"lineHeight": 18,
+		"editable": false,
+		"items": [
+			{
+				"text": "1",
+				"ref": 1,
+				"editable": false,
+				"icon": "pictlib:2023"
+			},
+			{
+				"text": "2",
+				"ref": 2,
+				"editable": false,
+				"icon": "pictlib:2024"
+			},
+			{
+				"text": "3",
+				"ref": 3,
+				"editable": false,
+				"icon": "pictlib:2025"
+			},
+			{
+				"text": "4",
+				"ref": 4,
+				"editable": false,
+				"icon": "pictlib:2026"
+			},
+			{
+				"text": "5",
+				"ref": 5,
+				"editable": false,
+				"icon": "pictlib:2027"
+			}
+		]
+	}
+}

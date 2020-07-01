@@ -1,0 +1,154 @@
+﻿{
+	"destination": "detailScreen",
+	"rightMargin": 0,
+	"bottomMargin": 10,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onTimer"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Web Area": {
+					"type": "webArea",
+					"top": 30,
+					"left": 0,
+					"width": 714,
+					"height": 445,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "Web Area",
+					"webEngine": "embedded",
+					"methodsAccessibility": "all",
+					"borderStyle": "none",
+					"events": [
+						"onLoad"
+					]
+				},
+				"Ruler": {
+					"type": "ruler",
+					"top": 488,
+					"left": 19,
+					"width": 135,
+					"height": 17,
+					"sizingY": "move",
+					"dataSource": "Form:C1466.zoom",
+					"continuousExecution": false,
+					"min": 100,
+					"max": 500,
+					"graduationStep": 2,
+					"step": 2,
+					"method": "ObjectMethods/Ruler.4dm",
+					"events": [
+						"onClick"
+					],
+					"focusable": false
+				},
+				"Button": {
+					"type": "button",
+					"top": 484,
+					"left": 598,
+					"width": 100,
+					"height": 24,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "",
+					"action": "cancel",
+					"text": "Cancel",
+					"class": "helvetica",
+					"events": [
+						"onClick"
+					],
+					"style": "roundedBevel"
+				},
+				"acceptImage": {
+					"type": "button",
+					"top": 484,
+					"left": 380,
+					"width": 100,
+					"height": 24,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "accept",
+					"text": "Select",
+					"class": "helvetica",
+					"events": [
+						"onClick"
+					],
+					"style": "roundedBevel"
+				},
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 714,
+					"height": 30,
+					"sizingX": "grow",
+					"fill": "transparent",
+					"stroke": "transparent"
+				},
+				"Text": {
+					"type": "text",
+					"top": 8,
+					"left": 2,
+					"width": 712,
+					"height": 16,
+					"sizingX": "grow",
+					"stroke": "#696969",
+					"class": "helvetica",
+					"textAlign": "center",
+					"text": "Select Image",
+					"fontFamily": "Arial",
+					"fontSize": 13
+				},
+				"deleteImage": {
+					"type": "button",
+					"top": 484,
+					"left": 489,
+					"width": 100,
+					"height": 24,
+					"sizingX": "move",
+					"sizingY": "move",
+					"text": "Delete",
+					"class": "helvetica",
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/deleteImage.4dm",
+					"style": "roundedBevel"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"menuBar": "Menu Bar #1"
+}

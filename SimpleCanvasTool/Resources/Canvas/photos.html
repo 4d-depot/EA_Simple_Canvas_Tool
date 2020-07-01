@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<script language="javascript" type="text/javascript">
+			var gw = 0
+			var selectedId = '';
+			function setSize(obid, val){
+				document.getElementById(obid).style.maxWidth = val + 'px';
+			}
+			function setClass(obid, classname){
+				document.getElementById(obid).setAttribute('class',classname);
+			} 
+			function changeCss(classname, element, value) {
+				var CSSRules
+				if (document.all) {
+					CSSRules = 'rules'
+				}else if (document.getElementById) {
+					CSSRules = 'cssRules'
+				}
+				for (var i = 0; i < document.styleSheets[0][CSSRules].length; i++) {
+					if (document.styleSheets[0][CSSRules][i].selectorText == classname) {
+						document.styleSheets[0][CSSRules][i].style[element] = value
+					}
+				}	
+			}
+
+			function setFullGrid(){
+				changeCss('.gridrow','height','100%');
+				changeCss('.gridrow','width','100%');
+				changeCss('body','overflow-y','auto');
+				changeCss('body','overflow-x','auto');
+			}
+
+			function getImgSrc(obid){
+				return document.getElementById(obid).src;
+			}
+			
+			function setClass(id, classname){
+				document.getElementById(id).setAttribute('class',classname);
+			}
+			function setSelectImage(ind){
+				$4d.jsSelectedImage(ind);
+				if(selectedId !== '')
+					setClass(selectedId, 'thumb');
+				selectedId = 'img'+ind;
+				setClass(selectedId, 'selectedThumb');
+			}
+		</script>
+		<style type="text/css">
+			body{
+				margin: 0;
+			}
+			.gridrow{
+				background-color: #FFFFFF;
+				overflow-x: hidden;
+    			overflow-y: hidden;
+				width: 100%;
+   			}
+			.thumb{
+				margin: 10px 10px 5px 10px;
+				max-width: 100px;
+				max-height: 100px;
+				border: solid 1px #ccc;
+				box-shadow: 0;
+			}
+			.thumb:hover {
+				box-shadow: 3px 3px 3px #ccc;
+			}
+			.thumb:active {
+				box-shadow: 3px 3px 3px #666;
+			}
+			.selectedThumb{
+				margin: 10px 10px 5px 10px;
+				max-width: 100px;
+				max-height: 100px;
+				border: solid 1px #ccc;
+				box-shadow: 3px 3px 3px #666;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="pgrid" class="gridrow">
+			<!--#4dloop base64data_at-->
+			<a onclick="setSelectImage(<!--#4dtext base64data_at-->);"
+			name="a<!--#4dtext base64data_at-->"><img id="img<!--#4dtext base64data_at-->" src="<!--#4dhtml base64data_at{base64data_at}-->" class="thumb"></a>
+			<!--#4dendloop-->
+		</div>
+	</body>
+</html>

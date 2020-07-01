@@ -1,0 +1,33 @@
+.bold {
+	font-family: Segoe UI;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.default {
+	font-family: Segoe UI;
+	font-size: 12px;
+}
+
+.helvetica {
+	font-family: Helvetica;
+	font-size: 12px;
+}
+
+.italic {
+	font-family: Segoe UI;
+	font-size: 12px;
+	font-style: italic;
+}
+
+.toolbar {
+	font-family: Segoe UI;
+	font-size: 10px;
+}
+
+.underline {
+	font-family: Segoe UI;
+	font-size: 12px;
+	text-decoration: underline;
+}
+

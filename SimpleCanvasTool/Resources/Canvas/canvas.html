@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas Paint - Example 5</title>
+    <style type="text/css">
+		#container { position: relative; }
+		#myCanvas { position: absolute; left: 0px; top: 0px; border: 0px solid #000; }
+		#myCanvasTemp { position: absolute; top: 0px; left: 0px; }
+		body { overflow-x: hidden; overflow-y: hidden; }
+    </style>
+	
+	<script type="text/javascript" src="canvas.js"></script>
+	<script language="javascript" type="text/javascript">
+		
+		var imgSource='';
+		var color = "#000000";
+		var strokeWidth = 1;
+		var drawingTool = 'line';
+		var savedImages = [];
+		var removedImages = [];
+		
+		var canvas = document.getElementById('myCanvas');
+		var context = canvas.getContext('2d');
+		
+		function getData() {
+			var canvas = document.getElementById('myCanvas');
+			var strData = canvas.toDataURL("image/png");
+			
+			return strData;
+		}
+		
+		function changeDrawTool(drawTool) {
+			var obj = document.getElementById('dtool');
+			obj.value = drawTool;
+			drawingTool = drawTool;
+			fireEvent(obj,'change');
+		}
+		
+		function fireEvent(element,event) {
+			if (document.createEventObject){
+			// dispatch for IE
+			var evt = document.createEventObject();
+			return element.fireEvent('on'+event,evt);
+			}
+			else{
+			// dispatch for firefox + others
+			var evt = document.createEvent("HTMLEvents");
+			evt.initEvent(event, true, true ); // event type,bubbling,cancelable
+			return !element.dispatchEvent(evt);
+			}
+		}		
+		
+		function resizeCanvas(width, height) {
+			var canvas = document.getElementById('myCanvas');
+			imgSource = getData();
+			canvas.width = width;
+			canvas.height = height;
+			fireEvent(window,'load');
+		}	
+		
+		function changeColor(hexColor) {
+			var tempCanvas = document.getElementById('myCanvasTemp');
+			var tempContext = tempCanvas.getContext('2d');
+			color = hexColor;
+			tempContext.strokeStyle = hexColor;
+		}
+		
+		function changeStrokeWidth(lWidth) {
+			var tempCanvas = document.getElementById('myCanvasTemp');
+			var tempContext = tempCanvas.getContext('2d');
+			strokeWidth = lWidth;
+			tempContext.lineWidth = lWidth;
+		}
+		
+		function undo () {
+			removeImage();
+			imgSource = savedImages.pop();
+			loadImage(imgSource);
+		}
+		
+		function redo () {
+			saveImage();
+			imgSource = removedImages.pop();
+			loadImage(imgSource);
+		}
+		
+		function saveImage() {
+			var canvas = document.getElementById('myCanvas');
+			var imgSrc = canvas.toDataURL("image/png");
+			savedImages.push(imgSrc);
+		}
+		
+		function removeImage() {
+			var canvas = document.getElementById('myCanvas');
+			var imgSrc = canvas.toDataURL("image/png");
+			removedImages.push(imgSrc);
+		}
+		
+		function clearCanvas() {
+			var canvas = document.getElementById('myCanvas');
+			var context = canvas.getContext('2d');
+			context.clearRect(0, 0, canvas.width, canvas.height);
+		}
+		
+		function loadImage(imageSource) {
+			var canvas = document.getElementById('myCanvas');
+			var context = canvas.getContext('2d');
+			var imageObject = new Image();
+			imageObject.onload = function() {
+				context.clearRect(0, 0, canvas.width, canvas.height);
+				context.drawImage(imageObject, 0, 0, canvas.width, canvas.height);
+			};
+			imageObject.src = imageSource;
+		}
+
+		
+	</script>
+  </head>
+	<body> 
+
+		<canvas id="myCanvas">
+			no canvas support
+		</canvas>
+	 
+		<select id="dtool" style="visibility:hidden;">
+			<option value="line">Line</option>
+			<option value="rect">Rectangle</option>
+			<option value="pencil">Pencil</option>
+			<option value="circle">Circle</option>
+			<option value="eraser">Eraser</option>
+			<option value="rectFill">Solid Rectangle</option>
+			<option value="circleFill">Solid Circle</option>
+		</select>
+
+	</body>
+</html>

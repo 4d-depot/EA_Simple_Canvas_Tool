@@ -1,0 +1,23 @@
+﻿{
+	"First Record": "First Record",
+	"Previous Record": "Previous Record",
+	"Next Record": "Next Record",
+	"Last Record": "Last Record",
+	"Delete Record": "Delete Record",
+	"Cancel": "Cancel",
+	"OK": "Accept",
+	"Record Number": "Record Position within Selection",
+	"undo": "Undo",
+	"redo": "Redo",
+	"line": "Line",
+	"rectangle": "Rectangle",
+	"circle": "Circle",
+	"rectangleFilled": "Filled Rectangle",
+	"circleFilled": "Filled Circle",
+	"eraser": "Eraser",
+	"brush": "Brush",
+	"color": "Color",
+	"stroke": "Line width",
+	"clear": "Clear",
+	"new": "New"
+}

@@ -1,0 +1,33 @@
+.bold {
+	font-family: Lucida Grande;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.default {
+	font-family: Lucida Grande;
+	font-size: 13px;
+}
+
+.helvetica {
+	font-family: Helvetica;
+	font-size: 12px;
+}
+
+.italic {
+	font-family: Lucida Grande;
+	font-size: 13px;
+	font-style: italic;
+}
+
+.toolbar {
+	font-family: Lucida Grande;
+	font-size: 10px;
+}
+
+.underline {
+	font-family: Lucida Grande;
+	font-size: 13px;
+	text-decoration: underline;
+}
+

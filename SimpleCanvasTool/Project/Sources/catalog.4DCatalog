@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="" uuid="1BE24F6584A2B84585CC89FC7357BAD3" collation_locale="en">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="Image" uuid="677CF7CEF3B34676BD32FF7512246E05" id="6">
+		<field name="ID" uuid="B7FF38E2CB684391BFEB06027EE109D1" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="name" uuid="310C8D862CFA4876A7E3E8796CFB17BA" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="base64data" uuid="F9476B14A09844E2B0B1286BA55EA312" type="10" never_null="true" id="3"/>
+		<primary_key field_name="ID" field_uuid="B7FF38E2CB684391BFEB06027EE109D1"/>
+		<table_extra input_form="Input" output_form="Output">
+			<editor_table_info displayable_fields_count="5">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="225.16015625" top="1.61328125" width="120" height="147.39453125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<index kind="regular" unique_keys="true" uuid="8BFE6C0C51174E4B8E832C885B758E1B" type="7">
+		<field_ref uuid="B7FF38E2CB684391BFEB06027EE109D1" name="ID">
+			<table_ref uuid="677CF7CEF3B34676BD32FF7512246E05" name="Image"/>
+		</field_ref>
+	</index>
+	<base_extra data_file_path=":SimpleCanvasTool.4DD" package_name="SimpleCanvasTool" structure_file_name="SimpleCanvasTool" __stringCompHash="icu:63.1.0" __keywordBuildingHash="icu:63.1.0">
+		<journal_file journal_file_enabled="false"/>
+	</base_extra>
+</base>

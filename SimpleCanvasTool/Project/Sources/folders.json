@@ -1,0 +1,57 @@
+﻿{
+	"Compiler": {
+		"methods": [
+			"Compiler_Arrays",
+			"Compiler_Methods",
+			"Compiler_Variables"
+		]
+	},
+	"Forms": {
+		"forms": [
+			"colorPicker",
+			"paintPane",
+			"selectImage"
+		]
+	},
+	"Methods": {
+		"groups": [
+			"Compiler",
+			"Project Methods"
+		]
+	},
+	"Project Methods": {
+		"methods": [
+			"convertIntToHex",
+			"cvOpenPaintPane",
+			"generatePhotoGrid",
+			"getCanvasImage",
+			"jsSelectedImage",
+			"openColorPicker",
+			"saveImage",
+			"selectImage",
+			"setCanvasDrawingTool",
+			"setCanvasSize",
+			"setCanvasStroke"
+		]
+	},
+	"Splashscreen": {
+		"methods": [
+			"_openSplashScreen"
+		],
+		"forms": [
+			"splashScreen"
+		]
+	},
+	"Tables": {
+		"tables": [
+			"Image"
+		]
+	},
+	"Unused": {
+		"forms": [
+			"[Image]Input",
+			"[Image]Output"
+		]
+	},
+	"trash": {}
+}
