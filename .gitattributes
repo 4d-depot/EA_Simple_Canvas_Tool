@@ -18,7 +18,6 @@
 # SVG treated as text.
 # If you want to treat it as binary,comment the next line.
 *.svg               text                                diff=xml
-*.html              text                                diff=html
 
 # Source files
 *.4DProject         text      linguist-language=4d    diff=json
